@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard | CodeQuest</title>
+  <style>
+    /* ===== GLOBAL ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      transition: background 0.4s, color 0.4s;
+    }
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #00838f;
+    }
+
+    /* ===== LEADERBOARD TABLE ===== */
+    .leaderboard-container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 20px 40px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    thead {
+      background: #00838f;
+      color: white;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background: #f0f4f8;
+    }
+    tr:hover {
+      background: #00c4cc;
+      color: white;
+      transition: 0.3s;
+    }
+    th {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ===== BADGES ===== */
+    .badge {
+      padding: 4px 10px;
+      border-radius: 12px;
+      color: white;
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+    .gold { background: #FFD700; color: black; }
+    .silver { background: #C0C0C0; color: black; }
+    .bronze { background: #cd7f32; color: white; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      th, td {
+        padding: 10px 8px;
+        font-size: 0.9rem;
+      }
+    }
+    @media (max-width: 480px) {
+      th, td {
+        padding: 8px 5px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CodeQuest Leaderboard</h2>
+
+  <div class="leaderboard-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Time Taken</th>
+          <th>Badge</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Kartikesh</td>
+          <td>98</td>
+          <td>45m</td>
+          <td><span class="badge gold">Gold</span></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Aditya</td>
+          <td>92</td>
+          <td>50m</td>
+          <td><span class="badge silver">Silver</span></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Riya</td>
+          <td>89</td>
+          <td>40m</td>
+          <td><span class="badge bronze">Bronze</span></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Samir</td>
+          <td>85</td>
+          <td>55m</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Neha</td>
+          <td>80</td>
+          <td>60m</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
